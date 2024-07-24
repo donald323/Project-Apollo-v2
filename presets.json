@@ -1,0 +1,17 @@
+{
+    "Earth":{
+        "mass": 5.97e24,
+        "radius": 6.3781e6,
+        "type": "planet"
+    },
+    "Moon":{
+        "mass": 7.35e22,
+        "radius": 1.7375e6,
+        "type": "moon"
+    },
+    "Jilin-1":{
+        "mass": 92,
+        "radius": 0.5,
+        "type": "spacecraft"
+    }
+}
