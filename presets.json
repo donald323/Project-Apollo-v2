@@ -13,5 +13,14 @@
         "mass": 92,
         "radius": 0.5,
         "type": "spacecraft"
+    },
+    "Lunar-Explorer-2":{
+        "mass": 4000,
+        "radius": 4,
+        "type": "prop_spacecraft",
+        "fuel": 2500,
+        "mass_flow": 2.27,
+        "thurst": 10000,
+        "rotate_max": 0.1
     }
 }
