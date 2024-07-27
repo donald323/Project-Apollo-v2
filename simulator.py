@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import tqdm
 import json
-import gymnasium as gym
 
 g = 6.67e-11
 
