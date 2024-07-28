@@ -58,7 +58,8 @@ class earth_moon_env(gym.Env):
                                           high = np.array([0.1,1.0]),
                                           dtype = np.float32)
         self.counter = 0
-    def reset(self):
+    def reset(self,seed=None):
+        super().reset(seed=seed)
         body_list, test_object = return_items()
         self.simulator = sim.simulator(body_list,test_object)
         obs = np.array(
@@ -72,7 +73,7 @@ class earth_moon_env(gym.Env):
             ]
         )
         self.counter = 0
-        return obs
+        return obs, {}
     def compute_reward(self):
         '''
         Reward Scheme
@@ -104,5 +105,5 @@ class earth_moon_env(gym.Env):
         reward = self.compute_reward()
         terminated = self.simulator.test_object.crash
         self.counter += 1
-        truncated = self.counter > int(2e6)
+        truncated = self.counter > int(1e6) - 1
         return next_obs, reward, terminated, truncated, {}
